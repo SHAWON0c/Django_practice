@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> This is the home page </h1>
+
+    <h2> Author: {{author}} </h2>
+    <h2> Age: {{age}} </h2>
+    <h2> {{lst}} </h2>
+
+
+    {{ lst | join:" - " }}
+
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+
+    <!-- Conditional Statement -->
+    {% if age >= 30 %}
+    <h1> this is working </h1>
+    
+    {% elif age >= 20 %}
+    <h1> working1 </h1>
+
+
+    {%else %}
+    <h1> working </h1>
+    {% endif %}
+
+<!-- //filters  -->
+    
+    {{ lst | join:" - " }}
+
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+
+    <h1>{{ birthday|date:"SHORT_DATE_FORMAT" }}</h1>
+    <h1>{{ cap | capfirst }}</h1>
+    <h1>{{ cut | cut:" " }}</h1>
+    <h1>{{ dictsort | dictsort:"name" }}</h1>
+    <h1>{{ first | first }}</h1>
+
+    <h1>{{ first | last }}</h1>
+    <h1>{{ first | length }}</h1>
+    <h1>{{ second | linenumbers }}</h1>
+    <h1>{{ lower | lower }}</h1>
+    <h1>{{ upper | upper }}</h1>
+    <h1>{{ value | title }}</h1>
+    <h1>{{ random | random }}</h1>
+    <h1>{{ random| slice:":2" }}</h1>
+    <h1>{{ birthday | time:"H:i" }}</h1>
+    <h1> {{ turn | truncatechars:7 }}  </h1>
+    <h1>{{ turn | wordcount }}</h1>
+    <h1>{{ test | striptags }}</h1>
+    <h1>{{ list | make_list }}</h1>
+
+
+
+
+
+</body>
+
+</html>
